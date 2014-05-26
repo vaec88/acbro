@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "tablas.css", :media => "screen" %>
+<div id="tabla">
+  <table class="bordered">
+    <tr>
+      <th><div class="titulos"><p>Cedula</p></div></th>
+      <th><div class="titulos"><p>Apellidos</p></div></th>
+      <th><div class="titulos"><p>Nombres</p></div></th>
+      <th><div class="titulos"><p>Direccion</p></div></th>
+      <th><div class="titulos"><p>Convencional</p></div></th>
+      <th><div class="titulos"><p>Celular</p></div></th>
+      <th><div class="titulos"><p>Email</p></div></th>
+    </tr>
+    <%@demandantes.each do |d|%>
+      <tr>
+        <td><%= label_tag nil, d.pers_cedula %></td>
+        <td><%= label_tag nil, d.pers_apellido %></td>
+        <td><%= label_tag nil, d.pers_nombre %></td>
+        <td><%= label_tag nil, d.pers_direccion %></td>
+        <td><%= label_tag nil, d.pers_telefono1 %></td>
+        <td><%= label_tag nil, d.pers_telefono2 %></td>
+        <td><%= label_tag nil, d.pers_email %></td>
+      </tr>
+    <%end%>
+  </table>
+</div>
